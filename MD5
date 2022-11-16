@@ -1,7 +1,7 @@
-64974f05784f89e498f1d82d8a5bc1f5 *DESCRIPTION
+49e733e7be95de22540e9ef8e21549b1 *DESCRIPTION
 c24b2143f752eb3f7a4c58397b01de21 *LICENSE
 9d0ff010a42b9a3168c29b33c1bf3c0b *NAMESPACE
-7ff5934c52ee8e8d3407bb1fd45dbf98 *NEWS.md
+20cd9a97ce805fa8757b6415f0945d76 *NEWS.md
 f0fc5080609c827502a06d5c22ac93d8 *R/Filtor.R
 bd9749a4596e374319979d75c15d5b7e *R/FiltorMaybe.R
 26d4f10450cfb46e387acf0691ccee53 *R/FiltorNull.R
@@ -32,7 +32,7 @@ fdc5a644554a4c3859457d7c4526a958 *R/RecombinatorConvexPair.R
 8f310a81f792f6e8e42ab9bbfb3f20de *R/RecombinatorNull.R
 1fb8bd53f0748c8f30f06313883595aa *R/RecombinatorProxy.R
 821e32ce484a74a4b51a61160a41a01f *R/RecombinatorSequential.R
-7e51975773f405a21ede9a65e9b42f97 *R/RecombinatorSimulatedBinaryCrossover.R
+301b22d561e6b0e52e26b9d90980aefa *R/RecombinatorSimulatedBinaryCrossover.R
 7142757b8f3324e65553f57ecfca880f *R/RecombinatorSwap.R
 4276d4fbeacfa88f375e86d3d2d13818 *R/Scalor.R
 4611f790d5081b3a23d190556efd9e74 *R/ScalorAggregate.R
@@ -150,7 +150,7 @@ e31062958ee7ebdb4ec27733b2c8e563 *man/dict_recombinators_convex.Rd
 60d64571f3175df66c35306f7b0d6704 *man/dict_recombinators_maybe.Rd
 54d8f2e69e74770506a0d6c849b295c9 *man/dict_recombinators_null.Rd
 202567877204400b84a4b43f41f4b6c0 *man/dict_recombinators_proxy.Rd
-646c5286f7625af51181172e15f8bb9a *man/dict_recombinators_sbx.Rd
+050c39b4337ff120a637d2c0b5bfef2b *man/dict_recombinators_sbx.Rd
 10db97bb4ac50efe274378cf4b07951d *man/dict_recombinators_sequential.Rd
 c45b1d0849ae32ff96769ec6fc763795 *man/dict_recombinators_swap.Rd
 f0509d3e967481c201368f09cef4e55a *man/dict_recombinators_xonary.Rd

@@ -54,7 +54,7 @@ RecombinatorSimulatedBinaryCrossover = R6Class("RecombinatorSimulatedBinaryCross
         n = p_vct(lower = 0, tags = "required")
       )
       param_set$values = list(n = 1)
-      super$initialize(keep_complement, "ParamDbl", param_set = param_set, packages = "stats", dict_entry = "sbx")
+      super$initialize(keep_complement, c("ParamInt", "ParamDbl"), param_set = param_set, packages = "stats", dict_entry = "sbx")
     }
   ),
   private = list(
@@ -68,10 +68,17 @@ RecombinatorSimulatedBinaryCrossover = R6Class("RecombinatorSimulatedBinaryCross
       if (length(n) != n_components) {
         stop("n must have either length 1, or length of input components.")
       }
-      nms = names(values)[abs(values[2] - values[1]) > sqrt(.Machine$double.eps)]
+      affecting <- abs(values[2] - values[1]) > sqrt(.Machine$double.eps)
+      if (!any(affecting)) return(values)
+      nms = names(values)[affecting]
+      n = n[affecting]
       names(n) = nms
       lower = self$primed_ps$lower[nms]
       upper = self$primed_ps$upper[nms]
+      is_nn_int = which(private$.primed_ps$class[nms] == "ParamInt")  # data.table assignment needs indices
+
+      lower[is_nn_int] = lower[is_nn_int] - 0.5
+      upper[is_nn_int] = upper[is_nn_int] + 0.5
 
       set(values, , nms, imap(values[, nms, with = FALSE], .f = function(x, name) {
         y1 = min(x)
@@ -86,6 +93,18 @@ RecombinatorSimulatedBinaryCrossover = R6Class("RecombinatorSimulatedBinaryCross
           c(c2, c1)
         }
       }))
+      if (length(is_nn_int)) {
+
+        values_mat <- as.matrix(values[, nms[is_nn_int], with = FALSE])
+        ### This is slow:
+        # rounded = round(values[, is_nn_int])
+        # rounded = sweep(rounded, 2, uppers[is_nn_int], pmin)
+        # rounded = sweep(rounded, 2, lowers[is_nn_int], pmax)
+        ### This is faster and does the same:
+        values_mat = t(pmax(pmin(t(round(values_mat)), upper[is_nn_int] - 0.5), lower[is_nn_int] + 0.5))
+        values[, nms[is_nn_int]]  = as.data.table(values_mat)
+      }
+      values
     }
   )
 )

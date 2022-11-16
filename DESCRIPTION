@@ -18,13 +18,13 @@ BugReports: https://github.com/mlr-org/miesmuschel/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 ByteCompile: yes
-Version: 0.0.1
+Version: 0.0.2
 Depends: paradox (>= 0.7.1)
 Imports: mlr3misc (>= 0.5.0), checkmate (>= 1.9.0), R6, bbotk (>=
         0.3.0.900), data.table, matrixStats, lgr
 Suggests: tinytest, mlr3tuning, mlr3, mlr3learners, ranger, xgboost,
         rpart
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.2
 Collate: 'dictionaries.R' 'MiesOperator.R' 'Filtor.R' 'FiltorMaybe.R'
         'FiltorNull.R' 'FiltorProxy.R' 'FiltorSurrogate.R'
         'FiltorSurrogateProgressive.R' 'FiltorSurrogateTournament.R'
@@ -48,11 +48,11 @@ Collate: 'dictionaries.R' 'MiesOperator.R' 'Filtor.R' 'FiltorMaybe.R'
         'TerminatorBudget.R' 'TerminatorGenerations.R' 'TunerMies.R'
         'bibentries.R' 'repr.R' 'utils.R' 'utils_mo.R' 'zzz.R'
 NeedsCompilation: no
-Packaged: 2022-11-09 13:52:30 UTC; user
+Packaged: 2022-11-16 16:37:10 UTC; user
 Author: Martin Binder [aut, cre],
   Lennart Schneider [ctb] (<https://orcid.org/0000-0003-4152-5308>),
   Susanne Dandl [ctb] (<https://orcid.org/0000-0003-4324-4163>),
   Andreas Hofheinz [ctb]
 Maintainer: Martin Binder <mlr.developer@mb706.com>
 Repository: CRAN
-Date/Publication: 2022-11-09 15:50:02 UTC
+Date/Publication: 2022-11-16 17:20:02 UTC
