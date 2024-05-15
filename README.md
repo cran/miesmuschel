@@ -2,9 +2,27 @@
 # miesmuschel: Mixed Integer Evolution Strategies
 
 [![check](https://github.com/mlr-org/miesmuschel/actions/workflows/check.yml/badge.svg)](https://github.com/mlr-org/miesmuschel/actions/workflows/check.yml)
-[![Coverage](https://codecov.io/github/mlr-org/miesmuschel/branch/master/graphs/badge.svg)](https://codecov.io/github/mlr-org/miesmuschel)
+[![Coverage](https://codecov.io/github/mlr-org/miesmuschel/branch/master/graphs/badge.svg)](https://app.codecov.io/github/mlr-org/miesmuschel)
 [![CRAN Status Badge](https://www.r-pkg.org/badges/version/miesmuschel)](https://CRAN.R-project.org/package=miesmuschel)
 [![CRAN Downloads](https://cranlogs.r-pkg.org/badges/miesmuschel)](https://CRAN.R-project.org/package=miesmuschel)
+
+## What does it do?
+
+`miesmuschel` provides evolutionary black box optimization algorithms, building on the [`bbotk`](https://bbotk.mlr-org.com/) package. `miesmuschel` offers both ready-to-use optimization algorithms, as well as their fundamental building blocks that can be used to manually construct specialized optimization loops.
+
+## What does it do? (poem version)
+
+(also giving a hint on how to pronounce "`miesmuschel`")
+
+The R software package `miesmuschel`  
+Offers opt-algorithms, so crucial  
+[`bbotk`](https://bbotk.mlr-org.com/) is its base, it's a powerful tool  
+For optimization, it's truly no fool  
+
+Ready-made or D-I-Y, the choice is yours  
+With `miesmuschel`, your options are wide open doors  
+So when you do optimize, just give it a try  
+With `miesmuschel`, surely, success is nigh!
 
 ## Project Status
 
